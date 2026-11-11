@@ -13,7 +13,16 @@ const router = createBrowserRouter([
     Component: AppLayout,
     children: [
       { index: true, Component: Home },
-      { path: "contact-us", Component: ContactUs },
+      {
+        path: "contact-us",
+        Component: ContactUs,
+        action: async ({ request }) => {
+          let formData = await request.formData();
+          formData.set("createdAt", Date.now())
+          const submitted = Object.fromEntries(formData.entries())
+          return submitted
+        }
+      },
       { path: "about", Component: About }
     ]
   },
