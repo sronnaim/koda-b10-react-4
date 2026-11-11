@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
 import AppLayout from './App';
+import { addMessage } from './lib/messages';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,9 @@ const router = createBrowserRouter([
           let formData = await request.formData();
           formData.set("createdAt", Date.now())
           const submitted = Object.fromEntries(formData.entries())
+
+          addMessage(submitted)
+
           return submitted
         }
       },

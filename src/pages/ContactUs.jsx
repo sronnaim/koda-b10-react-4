@@ -1,18 +1,16 @@
-import { useEffect } from "react";
-import { Form, useActionData } from "react-router";
+import { useSyncExternalStore } from "react";
+import { Form } from "react-router";
+import { getSnapshot, subscribe } from "../lib/messages";
+
 
 export default function ContactUs() {
-    let actionData = useActionData();
-
-    useEffect(() => {
-        if (actionData)
-            console.log(actionData)
-
-    }, [actionData])
+    const raw = useSyncExternalStore(subscribe, getSnapshot, () => null)
+    const messages = JSON.parse(raw)
 
     return (
         <>
             <section>
+                {messages && JSON.stringify(messages)}
                 <h1>Contact Us</h1>
                 <Form action="/contact-us" method="post">
                     <div>
