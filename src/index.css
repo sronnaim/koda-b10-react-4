@@ -14,5 +14,4 @@ body {
   background-image: radial-gradient(circle at 1px 1px, rgb(from var(--color-neutral-400) r g b / 0.5) 1px, transparent 0);
   background-size: 10px 10px;
   background-position: 5px 5px;
-
 }
