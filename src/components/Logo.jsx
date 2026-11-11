@@ -1,5 +1,17 @@
 import { Link } from "react-router";
 
+export function Icon() {
+    return (
+        <span className="bg-neutral-50 p-4 border border-neutral-400/50 rounded-4xl shadow-sm shadow-neutral-400/50 w-full max-w-20 grid gap-1 *:rounded-full *:bg-slate-900 *:first:bg-blue-500 *:aspect-square grid-cols-2" aria-hidden={true}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+
+    )
+}
+
 export default function Logo() {
     return (
         <Link to={"/"} className="flex gap-3 items-center text-2xl font-semibold">
