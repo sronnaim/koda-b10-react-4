@@ -4,3 +4,15 @@
 body {
   font-family: "Hanken Grotesk";
 }
+
+.dotted {
+  /*
+  Source - https://stackoverflow.com/a/55364821
+  Posted by Temani Afif, modified by community. See post 'Timeline' for change history
+  Retrieved 2026-11-11, License - CC BY-SA 4.0
+  */
+  background-image: radial-gradient(circle at 1px 1px, rgb(from var(--color-neutral-400) r g b / 0.5) 1px, transparent 0);
+  background-size: 10px 10px;
+  background-position: 5px 5px;
+
+}

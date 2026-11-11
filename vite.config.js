@@ -8,6 +8,9 @@ export default defineConfig({
   server: {
     watch: {
       usePolling: true
-    }
+    },
+    allowedHosts: [
+      "again-repressible-eldridge.ngrok-free.dev",
+    ]
   }
 })
